@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login | LuckHouse</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Apartado inicial -->
+    <div class="flex h-screen">
+        <div class="flex-1 bg-cover bg-center relative" style="background-image: url('/mnt/data/image.png');">
+            <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex flex-col justify-center items-center text-white">
+                <img src="img/img-slider-login-2.jpg" alt="" class="max-w-full mb-4">
+            </div>
+        </div>
+        <div class="w-full max-w-md p-8 bg-white shadow-lg flex flex-col justify-center space-y-6">
+            <h1 class="text-2xl font-bold mb-4">¡Bienvenido a LuckHouse!</h1>
+            <p class="text-gray-600 mb-6">Ingresa a tu cuenta para disfrutar de tus beneficios y de las mejores promociones que tenemos para ti.</p>
+            <ul class="flex mb-6 border-b">
+                <li class="mr-6">
+                    <a href="#" class="text-blue-500 font-bold py-2 px-4 border-b-2 border-blue-500" id="loginTab">Iniciar Sesión</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-500 py-2 px-4" id="registerTab">Registrarse</a>
+                </li>
+            </ul>
+            <form id="formLogin" class="block space-y-4">
+                <div id="loginError" class="hidden bg-red-100 text-red-700 p-2 rounded mb-4">Error en el formulario</div>
+                <input type="text" placeholder="Correo electrónico" class="w-full p-3 border border-gray-300 rounded" name="correo" autocomplete="off"> 
+                <div class="relative">
+                    <input type="password" placeholder="Contraseña" name="password" class="w-full p-3 border border-gray-300 rounded pr-10">
+                    <button type="button" class="absolute right-2 top-2 text-gray-600"><i class="fas fa-eye"></i></button>
+                </div>
+                <a href="#" class="text-blue-500 text-sm">¿Olvidaste tu contraseña?</a>
+                <button class="w-full bg-blue-500 text-white p-3 rounded font-bold hover:bg-blue-600" type="button">Iniciar Sesión</button>
+            </form>
+            <form id="formRegistro" class="hidden space-y-4">
+                <div id="registerError" class="hidden bg-red-100 text-red-700 p-2 rounded mb-4">Error en el formulario</div>
+                <input type="text" placeholder="Nombre y Apellidos" class="w-full p-3 border border-gray-300 rounded" name="nombre" autocomplete="off"> 
+                <input type="text" placeholder="Correo electrónico" class="w-full p-3 border border-gray-300 rounded" name="correo" autocomplete="off"> 
+                <div class="relative">
+                    <input type="password" placeholder="Contraseña" name="password" class="w-full p-3 border border-gray-300 rounded pr-10">
+                    <button type="button" class="absolute right-2 top-2 text-gray-600"><i class="fas fa-eye"></i></button>
+                </div>
+                <label class="flex items-center">
+                    <input type="checkbox" class="mr-2" name="cbx_notificaciones" checked>
+                    Me gustaría recibir notificaciones sobre productos
+                </label>
+                <label class="flex items-center">
+                    <input type="checkbox" class="mr-2" name="cbx_terminos">
+                    <span>He leído y acepto los <a href="#" class="text-blue-500">Términos y Condiciones</a> y la <a href="#" class="text-blue-500">Política de privacidad</a></span>
+                </label>
+                <button class="w-full bg-blue-500 text-white p-3 rounded font-bold hover:bg-blue-600" type="button">Crear Cuenta</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#loginTab').click(function(e) {
+                e.preventDefault();
+                $('#formLogin').show();
+                $('#formRegistro').hide();
+                $('#loginTab').addClass('text-blue-500 font-bold border-b-2 border-blue-500').removeClass('text-gray-500');
+                $('#registerTab').removeClass('text-blue-500 font-bold border-b-2 border-blue-500').addClass('text-gray-500');
+            });
+
+            $('#registerTab').click(function(e) {
+                e.preventDefault();
+                $('#formLogin').hide();
+                $('#formRegistro').show();
+                $('#registerTab').addClass('text-blue-500 font-bold border-b-2 border-blue-500').removeClass('text-gray-500');
+                $('#loginTab').removeClass('text-blue-500 font-bold border-b-2 border-blue-500').addClass('text-gray-500');
+            });
+        });
+    </script>
+</body>
+</html>

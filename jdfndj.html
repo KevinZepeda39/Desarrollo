@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <aside class="bg-white w-64 p-6">
+            <div class="mb-10">
+                <h2 class="text-xl font-bold">Cracovia University</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li class="mb-3"><a href="#" class="text-sm font-medium text-gray-700">Home</a></li>
+                    <li class="mb-3"><a href="#" class="text-sm font-medium text-gray-700">Your Threads</a></li>
+                    <li class="mb-3"><a href="#" class="text-sm font-medium text-gray-700">Saved</a></li>
+                </ul>
+                <div class="mt-8">
+                    <h3 class="text-sm font-bold text-gray-600">Current Courses (5)</h3>
+                    <ul class="mt-2">
+                        <li class="py-2 flex items-center justify-between text-sm text-gray-700">
+                            <span>Public Finance</span> 
+                            <span class="text-xs bg-purple-200 text-purple-800 px-2 py-1 rounded">1</span>
+                        </li>
+                        <li class="py-2 flex items-center justify-between text-sm text-gray-700">
+                            <span>Accounting</span> 
+                            <span class="text-xs bg-purple-200 text-purple-800 px-2 py-1 rounded">3</span>
+                        </li>
+                        <li class="py-2 flex items-center justify-between text-sm text-gray-700">
+                            <span>Corporate Law</span> 
+                            <span class="text-xs bg-purple-200 text-purple-800 px-2 py-1 rounded">1</span>
+                        </li>
+                        <li class="py-2 flex items-center justify-between text-sm text-gray-700">
+                            <span>Controlling</span> 
+                            <span class="text-xs bg-purple-200 text-purple-800 px-2 py-1 rounded">5</span>
+                        </li>
+                        <li class="py-2 flex items-center justify-between text-sm text-gray-700">
+                            <span>Acquisition</span> 
+                            <span class="text-xs bg-purple-200 text-purple-800 px-2 py-1 rounded">1</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-8">
+                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg">Join a new class</button>
+                </div>
+                <div class="mt-8">
+                    <h3 class="text-sm font-bold text-gray-600">Courses 2019/2020</h3>
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-sm font-bold text-gray-600">Courses 2018/2019</h3>
+                </div>
+            </nav>
+        </aside>
+
+        <div class="min-h-screen flex flex-col items-center p-8 w-full">
+            <!-- Barra de búsqueda -->
+            <header class="flex justify-between items-center w-full max-w-4xl mb-6">
+                <div class="flex items-center bg-white shadow-md rounded-full p-3 w-full max-w-md">
+                    <input type="text" placeholder="Add a new thread" class="w-full focus:outline-none text-gray-600 px-4">
+                    <button class="bg-purple-600 text-white p-2 rounded-full ml-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Threads Section -->
+            <section class="w-full max-w-4xl space-y-6">
+                <!-- Thread 1 -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="flex justify-between items-start mb-4">
+                        <h2 class="text-xl font-semibold">Lecture Rescheduling</h2>
+                        <span class="bg-purple-100 text-purple-700 text-sm font-medium px-2 py-1 rounded">Accounting</span>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/40" alt="User" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-semibold">Elisabeth May</p>
+                            <p class="text-gray-500 text-sm">6h ago</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Hi mates, so I talked with Dr. Hellen and because of her illness we need to reschedule the upcoming Lecture. 
+                        You probably notice that this lecture is the last before the exam, so Dr. Hellen asked us also if we want to attend 
+                        an additional lecture where we can study more difficult exercises.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <button class="flex items-center bg-gray-100 text-gray-700 px-4 py-2 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0l.172.172.172-.172a4 4 0 115.656 5.656l-6.343 6.344a1 1 0 01-1.414 0l-6.343-6.344a4 4 0 010-5.656z" clip-rule="evenodd" />
+                            </svg>
+                            Add Response
+                        </button>
+                        <div class="flex -space-x-2">
+                            <img src="https://via.placeholder.com/30" class="w-8 h-8 rounded-full border-2 border-white" />
+                            <img src="https://via.placeholder.com/30" class="w-8 h-8 rounded-full border-2 border-white" />
+                            <img src="https://via.placeholder.com/30" class="w-8 h-8 rounded-full border-2 border-white" />
+                            <span class="flex items-center justify-center w-8 h-8 bg-gray-200 text-gray-700 text-sm font-medium rounded-full">+11</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Thread 2 -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="flex justify-between items-start mb-4">
+                        <h2 class="text-xl font-semibold">Date of the final exams</h2>
+                        <div class="flex space-x-2">
+                            <span class="bg-purple-100 text-purple-700 text-sm font-medium px-2 py-1 rounded">Accounting</span>
+                            <span class="bg-green-100 text-green-700 text-sm font-medium px-2 py-1 rounded">Corporate Law</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/40" alt="User" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-semibold">Dr Ronald Jackson</p>
+                            <p class="text-gray-500 text-sm">3d ago</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        Dear Students, I want to inform you that after 6 months of our cooperation, it is necessary to test your knowledge by the final exam. 
+                        It means we need to find a date for our final exam. In this semester, you were extremely under stress due to the COVID-19 situation, 
+                        so I would like to offer an extra attempt for this test. My proposition is...
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <button class="flex items-center bg-gray-100 text-gray-700 px-4 py-2 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0l.172.172.172-.172a4 4 0 115.656 5.656l-6.343 6.344a1 1 0 01-1.414 0l-6.343-6.344a4 4 0 010-5.656z" clip-rule="evenodd" />
+                            </svg>
+                            Add Response
+                        </button>
+                        <div class="flex -space-x-2">
+                            <img src="https://via.placeholder.com/30" class="w-8 h-8 rounded-full border-2 border-white" />
+                            <img src="https://via.placeholder.com/30" class="w-8 h-8 rounded-full border-2 border-white" />
+                            <img src="https://via.placeholder.com/30" class="w-8 h-8 rounded-full border-2 border-white" />
+                            <span class="flex items-center justify-center w-8 h-8 bg-gray-200 text-gray-700 text-sm font-medium rounded-full">+5</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Sidebar -->
+        <aside class="bg-white w-80 p-6">
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold text-gray-700">Top Threads</h3>
+                <ul class="mt-4 space-y-4">
+                    <li class="flex items-start">
+                        <div class="w-10 h-10 flex items-center justify-center bg-purple-600 text-white rounded-full mr-4">1</div>
+                        <div class="flex-1">
+                            <h4 class="text-md font-semibold text-gray-700">Best classes for 1st-year students</h4>
+                            <p class="text-gray-500 text-sm">32 responses</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-10 h-10 flex items-center justify-center bg-purple-600 text-white rounded-full mr-4">2</div>
+                        <div class="flex-1">
+                            <h4 class="text-md font-semibold text-gray-700">Exam preparation tips</h4>
+                            <p class="text-gray-500 text-sm">28 responses</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-10 h-10 flex items-center justify-center bg-purple-600 text-white rounded-full mr-4">3</div>
+                        <div class="flex-1">
+                            <h4 class="text-md font-semibold text-gray-700">Looking for study buddies</h4>
+                            <p class="text-gray-500 text-sm">25 responses</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-700">Recent Activity</h3>
+                <ul class="mt-4 space-y-4">
+                    <li class="flex items-start">
+                        <img src="https://via.placeholder.com/40" alt="User" class="w-10 h-10 rounded-full mr-3">
+                        <div class="flex-1">
+                            <p class="text-md text-gray-700"><span class="font-semibold">Maria Lopez</span> responded to your thread</p>
+                            <p class="text-gray-500 text-sm">2 hours ago</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <img src="https://via.placeholder.com/40" alt="User" class="w-10 h-10 rounded-full mr-3">
+                        <div class="flex-1">
+                            <p class="text-md text-gray-700"><span class="font-semibold">John Doe</span> added a new thread</p>
+                            <p class="text-gray-500 text-sm">4 hours ago</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Eduteca is an engaging platform offering a variety of courses. Join us for free and start learning today!">
+	<title>Eduteca</title>
+	<!-- Tailwind -->
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<!-- Alpine -->
+	<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.0/dist/alpine.min.js" defer></script>
+	<!-- AOS -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<!-- Custom style -->
+	<link rel="stylesheet" href="css/index.css" />
+	<!-- Poppins font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<!-- Favicon -->
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body class="antialiased">
+	<!-- Navbar -->
+	<div x-data="{ open: false }" class="w-full text-gray-700 bg-cream">
+		<div class="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
+			<div class="flex flex-row items-center justify-between py-6">
+				<div class="relative md:mt-8">
+					<img src="img/esa onda (1).png" alt="Logo" class="inline-block h-8 mr-2">
+					<a href="#" class="text-lg relative z-50 font-bold tracking-widest text-gray-900 rounded-lg focus:outline-none focus:shadow-outline">Eduteca</a>
+				</div>
+				<button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+					<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+						<path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+						<path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+					</svg>
+				</button>
+			</div>
+			<nav :class="{ 'transform md:transform-none': !open, 'h-full': open }" class="h-0 md:h-auto flex flex-col flex-grow md:items-center pb-4 md:pb-0 md:flex md:justify-end md:flex-row origin-top duration-300 scale-y-0 text-white">
+				<a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="#">Home</a>
+				<a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="#">Comunidades</a>
+				<a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="#">Cursos</a>
+				<a class="px-10 py-3 mt-2 text-sm text-center bg-white text-gray-800 rounded-full md:mt-8 md:ml-4" href="#">Login</a>
+				<a class="px-10 py-3 mt-2 text-sm text-center bg-yellow-500 text-white rounded-full md:mt-8 md:ml-4" href="#">Sign Up</a>
+			</nav>
+		</div>
+	</div>
+	
+	<!-- Hero Section -->
+	<div class="bg-cream">
+		<div class="max-w-screen-xl px-8 mx-auto flex flex-col lg:flex-row items-start">
+			<!-- Left Column -->
+			<div class="flex flex-col w-full lg:w-6/12 justify-center lg:pt-24 items-start text-center lg:text-left mb-5 md:mb-0">
+				<h1 data-aos="fade-right" data-aos-once="true" class="my-4 text-5xl font-bold leading-tight text-darken">
+					<span class="text-white">Eduteca:</span>
+					<span class="text-white" id="typed-words"></span>
+				</h1>
+				<p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" class="leading-normal text-2xl mb-8 text-white">Eduteca es una plataforma muy entretenida debido a su variedad de cursos</p>
+				<div data-aos="fade-up" data-aos-once="true" data-aos-delay="700" class="w-full md:flex items-center justify-center lg:justify-start md:space-x-5">
+					<button class="lg:mx-0 text-white text-xl font-bold rounded-full py-4 px-9 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out">
+						Join for free
+					</button>
+					<div class="flex items-center justify-center space-x-3 mt-5 md:mt-0 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out">
+						<button class="bg-white w-14 h-14 rounded-full flex items-center justify-center">
+							<svg class="w-5 h-5 ml-2" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M22.5751 12.8097C23.2212 13.1983 23.2212 14.135 22.5751 14.5236L1.51538 27.1891C0.848878 27.5899 5.91205e-07 27.1099 6.25202e-07 26.3321L1.73245e-06 1.00123C1.76645e-06 0.223477 0.848877 -0.256572 1.51538 0.14427L22.5751 12.8097Z" fill="#23BDEE"/>
+							</svg>
+						</button>
+						<span class="cursor-pointer">Watch how it works</span>
+					</div>
+				</div>
+			</div>
+			<!-- Right Column -->
+			<div class="w-full lg:w-6/12 lg:-mt-10 relative" id="girl">
+				<img data-aos="fade-up" data-aos-once="true" class="w-10/12 mx-auto 2xl:-mb-20" src="img/girl.png" alt="Girl Illustration"/>
+				<!-- Decorations -->
+				<img data-aos="fade-down" data-aos-once="true" class="absolute right-0 lg:-top-20 w-8/12 z-10" src="img/fondo_naranja.png" alt="Background Decoration"/>
+				<img data-aos="fade-left" data-aos-once="true" data-aos-delay="500" class="hidden md:block absolute top-0 -mt-20 z-10 -ml-20" src="img/caja_morada.png" alt="Purple Box"/>
+				<img data-aos="fade-right" data-aos-once="true" data-aos-delay="700" class="hidden md:block absolute top-0 -mt-20 z-10 right-0" src="img/caja_naranja.png" alt="Orange Box"/>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Stats Section -->
+	<div class="relative pt-20 pb-32 flex content-center items-center justify-center bg-cream">
+		<div class="absolute top-0 w-full h-full bg-center bg-cover" style="background-image: url('img/stats-bg.jpg');"></div>
+		<div class="container relative mx-auto">
+			<div class="items-center flex flex-wrap">
+				<div class="w-full md:w-6/12 ml-auto mr-auto text-center">
+					<div class="pr-12">
+						<h2 class="text-white font-semibold text-5xl">Why Us?</h2>
+						<p class="mt-4 text-lg text-gray-300">Eduteca ofrece una experiencia educativa única y entretenida con una variedad de cursos para todos los gustos.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Footer -->
+	<footer class="bg-cream text-gray-700 body-font">
+		<div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+			<a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+				<img src="img/esa onda (1).png" alt="Footer Logo" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full">
+				<span class="ml-3 text-xl">Eduteca</span>
+			</a>
+			<p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2024 Eduteca —
+				<a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" target="_blank" rel="noopener noreferrer">@eduteca</a>
+			</p>
+			<span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+				<a class="text-gray-500">
+					<svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+						<path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM8 12h8v2H8v-2zM8 7h8v2H8V7z"></path>
+					</svg>
+				</a>
+				<a class="ml-3 text-gray-500">
+					<svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+						<path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0011.8 4v1A10.66 10.66 0 013 5s-4 9 5 13a11.64 11.64 0 01-6.29 1.84c6.29 3.84 14.29 0 14.29-11.34 0-.17 0-.34-.01-.51A8.1 8.1 0 0023 3z"></path>
+					</svg>
+				</a>
+				<a class="ml-3 text-gray-500">
+					<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+						<rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+						<path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01"></path>
+					</svg>
+				</a>
+				<a class="ml-3 text-gray-500">
+					<svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+						<path stroke="none" d="M16 8a6 6 0 00-11.95 2 9.25 9.25 0 00-4.48 7.46A9.2 9.2 0 009.35 24a12.25 12.25 0 0012.3-9.55A6 6 0 0016 8zm3.75 8.75A9.27 9.27 0 016 8.25c-.75-2.25 1.5-4.25 3-4.25s2.5 2.25 2.25 4.25c-.25 1.5-1.5 2.25-2.75 2.75-1.25 1-3.5 1-3.5 2s3.5 2 4.5 2c.75.5 3.25.25 3.75-2.25a8.29 8.29 0 01-1.5-6A9.27 9.27 0 0120.75 16.75z"></path>
+					</svg>
+				</a>
+			</span>
+		</div>
+	</footer>
+	
+	<!-- Scripts -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+		document.addEventListener('alpine:init', () => {
+			Alpine.data('navbar', () => ({
+				open: false
+			}));
+		});
+	</script>
+</body>
+</html>

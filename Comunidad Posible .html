@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class=" text-gray-800 font-sans">
+
+
+
+    <nav class="bg-white shadow-md  mb-5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16">
+            <div class="flex items-center">
+              <img class="h-8 w-8" src="img/esa onda (1).png" alt="Cracovia University Logo">
+              <div class="mr-10 text-xl font-bold text-gray-900">Cracovia University</div>
+            </div>
+            <div class="flex-1 flex items-center justify-center">
+              <div class="max-w-lg w-full lg:max-w-xs">
+                <label for="search" class="sr-only">Search</label>
+                <div class="relative">
+                  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 10-14 0 7 7 0 0014 0z"/>
+                    </svg>
+                  </div>
+                  <input id="search" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Type to search" type="search">
+                </div>
+              </div>
+            </div>
+            <div class="ml-6 flex items-center">
+              <a href="#" class="text-gray-900 hover:text-indigo-500 px-3 py-2 rounded-md text-sm font-medium">Grades</a>
+              <a href="#" class="text-gray-900 hover:text-indigo-500 px-3 py-2 rounded-md text-sm font-medium">Schedule</a>
+              <a href="#" class="text-gray-900 hover:text-indigo-500 px-3 py-2 rounded-md text-sm font-medium">Community</a>
+              <a href="#" class="text-gray-900 hover:text-indigo-500 px-3 py-2 rounded-md text-sm font-medium">Payments</a>
+            </div>
+            <div class="ml-4 flex items-center">
+              <button class="bg-gray-50 p-1 rounded-full text-gray-500 hover:text-gray-700">
+                <span class="sr-only">View notifications</span>
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405 1.405a1.995 1.995 0 01-2.83 0L15 17zm1-7v-2a5 5 0 00-10 0v2m11 0a2 2 0 11-2 2 2 2 0 012-2zM8 11a2 2 0 114 0H8zm-5 9h5a2 2 0 002-2v-1a2 2 0 012 2h5a2 2 0 002-2v-1a2 2 0 012 2h5a2 2 0 002-2v-1a2 2 0 012 2h5v1a2 2 0 002-2h5a2 2 0 002-2h-5v-1a2 2 0 002-2h5a2 2 0 002-2h-5v-1a2 2 0 002-2h5a2 2 0 002-2h-5v-1a2 2 0 002-2h-5z"/>
+                </svg>
+              </button>
+              <button class="ml-3 bg-gray-50 p-1 rounded-full text-gray-500 hover:text-gray-700">
+                <span class="sr-only">User menu</span>
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405 1.405a1.995 1.995 0 01-2.83 0L15 17zm1-7v-2a5 5 0 00-10 0v2m11 0a2 2 0 11-2 2 2 2 0 012-2zM8 11a2 2 0 114 0H8zm-5 9h5a2 2 0 002-2v-1a2 2 0 012 2h5a2 2 0 002-2v-1a2 2 0 012 2h5a2 2 0 002-2v-1a2 2 0 012 2h5v1a2 2 0 002-2h5a2 2 0 002-2h-5v-1a2 2 0 002-2h5a2 2 0 002-2h-5v-1a2 2 0 002-2h-5v-1a2 2 0 002-2h-5z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      
+    <div class="min-h-screen flex">
+        <aside class="bg-white w-64 p-6 border-r border-gray-200">
+            <div class="mb-10">
+                <h2 class="text-xl font-bold">Cracovia University</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li class="mb-3 flex items-center">
+                        <span class="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
+                        <a href="#" class="text-sm font-medium text-gray-700">Home</a>
+                    </li>
+                    <li class="mb-3 flex items-center">
+                        <span class="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
+                        <a href="#" class="text-sm font-medium text-gray-700">Your Threads</a>
+                    </li>
+                    <li class="mb-3 flex items-center">
+                        <span class="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
+                        <a href="#" class="text-sm font-medium text-gray-700">Saved</a>
+                    </li>
+                </ul>
+                <div class="mt-8">
+                    <h3 class="text-sm font-bold text-gray-600 flex items-center justify-between">
+                        <span>Current Courses (5)</span>
+                        <span class="text-gray-400">&uarr;</span>
+                    </h3>
+                    <ul class="mt-2 space-y-1">
+                        <li class="py-2 px-3 flex items-center justify-between text-sm text-gray-700 rounded-md cursor-pointer hover:bg-purple-100">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-purple-600 rounded-full mr-3"></span>
+                                <span>Public Finance</span>
+                            </div>
+                            <span class="text-xs bg-purple-200 text-purple-800 px-2 py-1 rounded">1</span>
+                        </li>
+                        <li class="py-2 px-3 flex items-center justify-between text-sm text-gray-700 bg-purple-100 rounded-md cursor-pointer">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-purple-600 rounded-full mr-3"></span>
+                                <span>Accounting</span>
+                            </div>
+                            <span class="text-xs bg-purple-200 text-purple-800 px-2 py-1 rounded">3</span>
+                        </li>
+                        <li class="py-2 px-3 flex items-center justify-between text-sm text-gray-700 rounded-md cursor-pointer hover:bg-purple-100">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-400 rounded-full mr-3"></span>
+                                <span>Corporate Law</span>
+                            </div>
+                            <span class="text-xs bg-purple-200 text-purple-800 px-2 py-1 rounded">1</span>
+                        </li>
+                        <li class="py-2 px-3 flex items-center justify-between text-sm text-gray-700 rounded-md cursor-pointer hover:bg-purple-100">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-pink-400 rounded-full mr-3"></span>
+                                <span>Controlling</span>
+                            </div>
+                            <span class="text-xs bg-purple-200 text-purple-800 px-2 py-1 rounded">5</span>
+                        </li>
+                        <li class="py-2 px-3 flex items-center justify-between text-sm text-gray-700 rounded-md cursor-pointer hover:bg-purple-100">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-red-400 rounded-full mr-3"></span>
+                                <span>Acquisition</span>
+                            </div>
+                            <span class="text-xs bg-purple-200 text-purple-800 px-2 py-1 rounded">1</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-8">
+                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg flex items-center justify-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        Join a new class
+                    </button>
+                </div>
+                <div class="mt-8">
+                    <h3 class="text-sm font-bold text-gray-600">Courses 2019/2020</h3>
+                    <ul class="mt-2">
+                        <li class="py-2 px-3 flex items-center justify-between text-sm text-gray-700 rounded-md cursor-pointer hover:bg-purple-100">
+                            <span>44</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-sm font-bold text-gray-600">Courses 2018/2019</h3>
+                    <ul class="mt-2">
+                        <li class="py-2 px-3 flex items-center justify-between text-sm text-gray-700 rounded-md cursor-pointer hover:bg-purple-100">
+                            <span>44</span>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <div class="flex flex-col md:flex-row flex-1">
+            <div class="min-h-screen flex flex-col items-center p-8 w-full">
+                <header class="flex justify-between items-center w-full max-w-4xl mb-6">
+                    <div class="flex items-center bg-white shadow-md rounded-full p-3 w-full max-w-3xl"> <!-- Cambiado a max-w-3xl -->
+                        <input type="text" placeholder="Add a new thread" class="w-full focus:outline-none text-gray-600 px-4">
+                        <button class="bg-purple-600 text-white p-2 rounded-full ml-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                            </svg>
+                        </button>
+                    </div>
+                </header>
+                
+                
+
+                <section class="w-full max-w-4xl space-y-6">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-xl font-semibold">Lecture Rescheduling</h2>
+                            <span class="bg-purple-100 text-purple-700 text-sm font-medium px-2 py-1 rounded">Accounting</span>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <img src="img/children-laptop.png" alt="User" class="w-10 h-10 rounded-full mr-3">
+                            <div>
+                                <p class="font-semibold">Elisabeth May</p>
+                                <p class="text-gray-500 text-sm">6h ago</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Hi mates, so I talked with Dr. Hellen and because of her illness we need to reschedule the upcoming Lecture. 
+                            You probably notice that this lecture is the last before the exam, so Dr. Hellen asked us also if we want to attend 
+                            an additional lecture where we can study more difficult exercises.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <button class="flex items-center bg-gray-100 text-gray-700 px-4 py-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0l.172.172.172-.172a4 4 0 115.656 5.656l-6.343 6.344a1 1 0 01-1.414 0l-6.343-6.344a4 4 0 010-5.656z" clip-rule="evenodd" />
+                                </svg>
+                                Add Response
+                            </button>
+                            
+                            <div class="flex -space-x-2">
+                                <img src="https://via.placeholder.com/24" alt="User" class="w-6 h-6 rounded-full border-2 border-white">
+                                <img src="https://via.placeholder.com/24" alt="User" class="w-6 h-6 rounded-full border-2 border-white">
+                                <img src="https://via.placeholder.com/24" alt="User" class="w-6 h-6 rounded-full border-2 border-white">
+                                <span class="text-gray-500 text-sm">+5 others</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thread 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-xl font-semibold">Exam Preparation</h2>
+                            <span class="bg-purple-100 text-purple-700 text-sm font-medium px-2 py-1 rounded">Corporate Law</span>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <img src="https://via.placeholder.com/40" alt="User" class="w-10 h-10 rounded-full mr-3">
+                            <div>
+                                <p class="font-semibold">Mark Zuckerberg</p>
+                                <p class="text-gray-500 text-sm">4h ago</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Hello everyone, I think it would be beneficial if we could set up a study group for the upcoming exam.
+                            Corporate Law is tough, and going over the material together could really help us understand the key concepts.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <button class="flex items-center bg-gray-100 text-gray-700 px-4 py-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0l.172.172.172-.172a4 4 0 115.656 5.656l-6.343 6.344a1 1 0 01-1.414 0l-6.343-6.344a4 4 0 010-5.656z" clip-rule="evenodd" />
+                                </svg>
+                                Add Response
+                            </button>
+                            <div class="flex -space-x-2">
+                                <img src="https://via.placeholder.com/24" alt="User" class="w-6 h-6 rounded-full border-2 border-white">
+                                <img src="https://via.placeholder.com/24" alt="User" class="w-6 h-6 rounded-full border-2 border-white">
+                                <img src="https://via.placeholder.com/24" alt="User" class="w-6 h-6 rounded-full border-2 border-white">
+                                <span class="text-gray-500 text-sm">+5 others</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- New Section for Lecture Information -->
+            <div class="bg-white rounded-lg shadow-md p-6 w-80">
+                <h2 class="text-2xl font-bold mb-2">Accounting</h2>
+                <p class="text-gray-500 mb-4">Group: Rz160015</p>
+                <div class="flex flex-col items-center mb-4">
+                    <img src="https://via.placeholder.com/100" alt="Dr Ronald Jackson" class="w-20 h-20 rounded-full mb-4">
+                    <div class="text-center">
+                        <h3 class="text-xl font-semibold">Dr Ronald Jackson</h3>
+                        <p class="text-blue-500 bg-blue-100 px-2 py-1 rounded-full inline-block">Main Lecturer</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                    <div class="flex items-center mb-2">
+                        <svg class="w-6 h-6 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a1 1 0 001.22 0L21 8M5 19h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v9a2 2 0 002 2z"></path>
+                        </svg>
+                        <p class="text-gray-700">+48 550 233 553</p>
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-6 h-6 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12h4M12 16h4M12 8h4M5 16h.01M8 16h.01M5 12h.01M8 12h.01M5 8h.01M8 8h.01M9 20v2a2 2 0 11-4 0v-2a2 2 0 014 0zM21 20v2a2 2 0 11-4 0v-2a2 2 0 014 0zM21 16v2a2 2 0 11-4 0v-2a2 2 0 014 0zM21 12v2a2 2 0 11-4 0v-2a2 2 0 014 0zM21 8v2a2 2 0 11-4 0V8a2 2 0 014 0z"></path>
+                        </svg>
+                        <a href="mailto:ronald.jackson@uec.pl" class="text-blue-500">ronald.jackson@uec.pl</a>
+                    </div>
+                </div>
+                <h4 class="text-lg font-semibold mb-2">22 attendees</h4>
+                <ul class="space-y-2">
+                    <li class="flex items-center">
+                        <img src="https://via.placeholder.com/40" alt="Leslie Alexander" class="w-10 h-10 rounded-full mr-3">
+                        <span>Leslie Alexander</span>
+                    </li>
+                    <li class="flex items-center">
+                        <img src="https://via.placeholder.com/40" alt="Darlene Robertson" class="w-10 h-10 rounded-full mr-3">
+                        <span>Darlene Robertson</span>
+                    </li>
+                    <li class="flex items-center">
+                        <img src="https://via.placeholder.com/40" alt="Albert Flores" class="w-10 h-10 rounded-full mr-3">
+                        <span>Albert Flores</span>
+                    </li>
+                    <li class="flex items-center">
+                        <img src="https://via.placeholder.com/40" alt="Jane Cooper" class="w-10 h-10 rounded-full mr-3">
+                        <span>Jane Cooper</span>
+                    </li>
+                    <li class="flex items-center">
+                        <img src="https://via.placeholder.com/40" alt="Brooklyn Simmons" class="w-10 h-10 rounded-full mr-3">
+                        <span>Brooklyn Simmons</span>
+                    </li>
+                    <li class="flex items-center">
+                        <img src="https://via.placeholder.com/40" alt="Annette Black" class="w-10 h-10 rounded-full mr-3">
+                        <span>Annette Black</span>
+                    </li>
+                    <li class="flex items-center">
+                        <img src="https://via.placeholder.com/40" alt="Cameron Williamson" class="w-10 h-10 rounded-full mr-3">
+                        <span>Cameron Williamson</span>
+                    </li>
+                    <li class="flex items-center">
+                        <img src="https://via.placeholder.com/40" alt="Jenny Wilson" class="w-10 h-10 rounded-full mr-3">
+                        <span>Jenny Wilson</span>
+                    </li>
+                </ul>
+            </div>
+        
+        </div>
+    </div>
+</body>
+</html>
